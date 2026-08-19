@@ -1,0 +1,15 @@
+baseURL = "https://eraslumina.github.io/ErasLumina-Website/"
+languageCode = "en"
+title = "ErasLumina — PotHole Dodgers"
+timeZone = "Africa/Johannesburg"
+enableRobotsTXT = true
+
+[params]
+description = "Open-world highway combat racing. Destruction is progression."
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true

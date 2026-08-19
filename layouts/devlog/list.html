@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <section id="devlog">
+    <div class="container">
+      <h2>Development</h2>
+      <p class="lead">Solo dev. Real-time updates. No gatekeeping.</p>
+      <div class="timeline">
+        {{ range .RegularPages.ByDate.Reverse }}
+        <div class="tl-entry">
+          <span class="tl-date">{{ .Date.Format "Jan 2006" }}</span>
+          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+          <p>{{ .Summary | plainify | htmlUnescape }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <p style="margin-top:2.5rem;">
+        <a href="/" class="btn btn-outline">&larr; Back to home</a>
+      </p>
+    </div>
+  </section>
+{{ end }}

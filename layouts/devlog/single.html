@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <section id="devlog">
+    <div class="container" style="max-width:800px;">
+      <span class="tl-date">{{ .Date.Format "Jan 2006" }}</span>
+      <h2 style="font-size:2rem; margin-top:0.75rem;">{{ .Title }}</h2>
+      <div class="post-body">
+        {{ .Content }}
+      </div>
+      <p style="margin-top:3rem;">
+        <a href="/devlog/" class="btn btn-outline">&larr; All updates</a>
+      </p>
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,106 @@
+{{ define "main" }}
+  <!-- HERO -->
+  <header id="hero">
+    <div class="hero-inner">
+      <img src="images/logo-no-background.svg" alt="ErasLumina" class="hero-logo" />
+      <h1>PotHole Dodgers</h1>
+      <p class="tagline">Open-world highway combat racing.<br />Destruction is progression.</p>
+      <div class="hero-ctas">
+        <a href="https://www.epicgames.com" class="btn btn-primary" target="_blank">Coming to Epic Games Store</a>
+        <a href="#devlog" class="btn btn-outline">Watch Dev Log</a>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </header>
+
+  <!-- GAME -->
+  <section id="game">
+    <div class="container">
+      <h2>The Game</h2>
+      <p class="lead">
+        An open-world highway combat racing sim set on the roads of Gauteng, South Africa.
+        <em>Death Race</em> weaponized rolling death machines meets <em>Driv3r</em> difficulty scaling,
+        <em>Burnout Revenge</em> chaos engineering, and real sim-grade physics.
+      </p>
+      <div class="game-grid">
+        <div class="card">
+          <h3>Free-Roam</h3>
+          <p>Drive an unmodified vehicle through a seamless, infinite rolling horizon. No weapons, no armor — pure survival. Fuel burns constantly, forcing real engagement decisions.</p>
+        </div>
+        <div class="card">
+          <h3>Combat Events</h3>
+          <p>Race against AI opponents that learn how <em>you</em> play via neural networks. Earn scrap, fuel and ammo. Every event is different — road conditions degrade in real time.</p>
+        </div>
+        <div class="card">
+          <h3>Workshop</h3>
+          <p>Your garage is your safe zone. Rebuild, armor up, switch vehicles and plan your next run. Manage SCRAP / FUEL / AMMO economy to survive the highway.</p>
+        </div>
+        <div class="card">
+          <h3>Real Terrain</h3>
+          <p>Built from actual SRTM satellite heightmaps of Gauteng — 44,373 km² of real South African terrain at 30m resolution. No hand-sculpted roads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="alt-bg">
+    <div class="container">
+      <h2>Features</h2>
+      <ul class="feature-list">
+        <li><strong>Infinite Rolling Horizon</strong> — The highway never ends. World tiles load seamlessly around you.</li>
+        <li><strong>Real Road Degradation</strong> — Potholes, cracks and erosion evolve as you drive. Roads get worse.</li>
+        <li><strong>AI Rivals with ANN</strong> — Opponents use artificial neural networks that adapt to your driving style.</li>
+        <li><strong>Economy of Scrap &amp; Fuel</strong> — Earn parts in events, spend them in the Workshop. Fail and lose your vehicle — keep salvage.</li>
+        <li><strong>South African Setting</strong> — East Rand / Gauteng. Real geography, real landmarks, real elevation data.</li>
+        <li><strong>Unreal Engine 5</strong> — C++ gameplay code. World Partition for streaming. Nanite-ready destruction.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DEV LOG (generated from content/devlog/*.md) -->
+  <section id="devlog">
+    <div class="container">
+      <h2>Development</h2>
+      <p class="lead">Solo dev. Real-time updates. No gatekeeping.</p>
+      <div class="timeline">
+        {{ range first 3 (where site.RegularPages "Section" "devlog") }}
+        <div class="tl-entry">
+          <span class="tl-date">{{ .Date.Format "Jan 2006" }}</span>
+          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+          <p>{{ .Summary | plainify | htmlUnescape }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <p class="lead" style="margin-top:2.5rem;">
+        <a href="/devlog/" class="btn btn-outline">All updates &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section id="support" class="alt-bg">
+    <div class="container">
+      <h2>Support the Dev</h2>
+      <p class="lead">This is a solo project. Every bit helps keep the lights on and the code shipping.</p>
+      <div class="support-grid">
+        <a href="https://www.patreon.com/44erasstudios" class="support-card" target="_blank">
+          <h4>Patreon</h4>
+          <p>Monthly support with exclusive dev updates</p>
+        </a>
+        <a href="https://www.buymeacoffee.com/44erasstudios" class="support-card" target="_blank">
+          <h4>Buy Me a Coffee</h4>
+          <p>One-off donations, no strings</p>
+        </a>
+        <a href="https://github.com/Piosonlink" class="support-card" target="_blank">
+          <h4>GitHub</h4>
+          <p>Follow the dev process</p>
+        </a>
+        <a href="https://www.youtube.com/@44eras" class="support-card" target="_blank">
+          <h4>YouTube</h4>
+          <p>Dev logs and gameplay captures</p>
+        </a>
+      </div>
+    </div>
+  </section>
+{{ end }}
