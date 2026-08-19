@@ -1,14 +1,14 @@
   <!-- NAV -->
   <nav id="nav">
     <div class="nav-inner">
-      <a href="/" class="logo-link">
+      <a href="{{ .Site.BaseURL }}" class="logo-link">
         <img src="images/logo-no-background.svg" alt="ErasLumina" class="nav-logo" />
       </a>
       <ul class="nav-links">
-        <li><a href="/#game">Game</a></li>
-        <li><a href="/#features">Features</a></li>
-        <li><a href="/#devlog">Dev Log</a></li>
-        <li><a href="/#support">Support</a></li>
+        <li><a href="{{ .Site.BaseURL }}#game">Game</a></li>
+        <li><a href="{{ .Site.BaseURL }}#features">Features</a></li>
+        <li><a href="{{ .Site.BaseURL }}#devlog">Dev Log</a></li>
+        <li><a href="{{ .Site.BaseURL }}#support">Support</a></li>
       </ul>
     </div>
   </nav>
