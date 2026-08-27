@@ -9,8 +9,8 @@
   {{- else }}
   <title>{{ .Title }} — {{ .Site.Title }}</title>
   {{- end }}
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="icon" href="images/logo-no-background.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}" />
+  <link rel="icon" href="{{ "images/logo-no-background.svg" | relURL }}" type="image/svg+xml" />
   {{- if .IsHome }}
   <link rel="alternate" type="application/rss+xml" title="ErasLumina Dev Log" href="index.xml" />
   {{- end }}
